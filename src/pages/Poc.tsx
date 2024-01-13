@@ -76,6 +76,22 @@ function Poc() {
     console.log(res);
   };
 
+  const requestAccess = async () => {
+    const signer = provider.getSigner();
+    const ct = new ethers.Contract(
+      "0x04b736fF75eB8A9EBCe0f07460515E7D4f77aabF",
+      ctABI,
+      signer
+    );
+
+    let tx = await ct.requestAccess(
+      (document.getElementById("Request Access Student Id") as HTMLInputElement)
+        ?.value
+    );
+    let res = await tx.wait();
+    console.log(res);
+  };
+
   const getRecord = async () => {
     const signer = provider.getSigner();
     const ct = new ethers.Contract(
@@ -156,7 +172,17 @@ function Poc() {
       )}
       {address && address != HEC && address != university && (
         <>
-          <h4>Third Party: View Records</h4>
+          <h4>Third Party:</h4>
+          <h4>Request Records</h4>
+          <div>
+            <label>
+              Student Id:
+              <input id="Request Access Student Id" />
+            </label>
+            <button onClick={requestAccess}>Submit</button>
+          </div>
+
+          <h4>View Records</h4>
           <div>
             <label>
               Student Id:
