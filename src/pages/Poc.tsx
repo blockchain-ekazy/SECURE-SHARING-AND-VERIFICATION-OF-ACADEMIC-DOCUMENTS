@@ -154,7 +154,7 @@ function Poc() {
           </div>
         </>
       )}
-      {address && (
+      {address && address != HEC && address != university && (
         <>
           <h4>Third Party: View Records</h4>
           <div>
