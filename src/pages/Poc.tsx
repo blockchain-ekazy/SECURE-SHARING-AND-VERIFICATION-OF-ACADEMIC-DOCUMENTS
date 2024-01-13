@@ -2,7 +2,6 @@ import { useWeb3Modal } from "@web3modal/react";
 import { useEffect, useState } from "react";
 import { useAccount, useNetwork, useSwitchNetwork } from "wagmi";
 import { ethers } from "ethers";
-import { goerli, avalancheFuji } from "wagmi/chains";
 import ctABI from "./ctABI.json";
 
 const university = "0x29dbe8f7F5E9771182aC3f7e451EC0D43EE4cCd8";
