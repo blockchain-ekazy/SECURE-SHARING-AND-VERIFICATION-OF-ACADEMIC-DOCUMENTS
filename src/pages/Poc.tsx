@@ -4,8 +4,8 @@ import { useAccount, useNetwork, useSwitchNetwork } from "wagmi";
 import { ethers } from "ethers";
 import ctABI from "./ctABI.json";
 
-const university = "0x29dbe8f7F5E9771182aC3f7e451EC0D43EE4cCd8";
-const HEC = "0x942F211B5976d90d0FC4e3aa07f89CF466438F63";
+const university = "0x3c86B7c50115A6435E46498D81e0f30bA98D725A";
+const HEC = "0x7945def46Fc0E453aDD05fE342aB1D8169Fff69f";
 
 function Poc() {
   const { open } = useWeb3Modal();
@@ -32,7 +32,7 @@ function Poc() {
       }
 
       const ct = new ethers.Contract(
-        "0x04b736fF75eB8A9EBCe0f07460515E7D4f77aabF",
+        "0x827e1D794911BB9C18B8bDefBe41845157E456F9",
         ctABI,
         provider
       );
@@ -47,7 +47,7 @@ function Poc() {
   const addRecord = async () => {
     const signer = provider.getSigner();
     const ct = new ethers.Contract(
-      "0x04b736fF75eB8A9EBCe0f07460515E7D4f77aabF",
+      "0x827e1D794911BB9C18B8bDefBe41845157E456F9",
       ctABI,
       signer
     );
@@ -66,7 +66,7 @@ function Poc() {
   const approve = async (thirdParty: any, studentId: any) => {
     const signer = provider.getSigner();
     const ct = new ethers.Contract(
-      "0x04b736fF75eB8A9EBCe0f07460515E7D4f77aabF",
+      "0x827e1D794911BB9C18B8bDefBe41845157E456F9",
       ctABI,
       signer
     );
@@ -79,7 +79,7 @@ function Poc() {
   const requestAccess = async () => {
     const signer = provider.getSigner();
     const ct = new ethers.Contract(
-      "0x04b736fF75eB8A9EBCe0f07460515E7D4f77aabF",
+      "0x827e1D794911BB9C18B8bDefBe41845157E456F9",
       ctABI,
       signer
     );
@@ -95,7 +95,7 @@ function Poc() {
   const getRecord = async () => {
     const signer = provider.getSigner();
     const ct = new ethers.Contract(
-      "0x04b736fF75eB8A9EBCe0f07460515E7D4f77aabF",
+      "0x827e1D794911BB9C18B8bDefBe41845157E456F9",
       ctABI,
       signer
     );
